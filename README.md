@@ -5,7 +5,7 @@ This project aims at using the concept of Spectral Bipartite Clustering in Graph
 I have made use of nested functions to implement the community splitting. Which works like, first there is a function to check the modularity score,  then we come to the nested functions, inside a function call graph() I define many functions like find_s, matrix,..etc for implementing each step in the algorithm. Before each split, the modularity score is checked, and the spplitting takes place only if the current modularity score is greater than the previous one. And also by checking whether the leading eigen value is positive. For reference the change in modularity score after each split is mentioned. Then, after checking the condition,if true, we are splitting and getting 2 subgraphs G1, G2 which are again passed on to graph() function again. This process continues until the modularity score starts decreasing. We have also included trivial cases such as communities zero or very less nodes, that time we do median split.
 
 # Advantage of using Nested Functions
-For this specific problem, nested functions provide the perfect balance of organization,encapsulation and simplicity, while keeping the Newman algorithm self-contained and readable.
+For this specific problem, nested functions provide the perfect balance of organization,encapsulation and simplicity, while keeping the Newman algorithm self-contained and readable. It also shortens the code.
 
 # Visualization
 I have used line plot to visualize the evolution of all centrality measures over each splits, for all nodes. However, for simplicity only few nodes are shown.
